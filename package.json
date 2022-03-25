@@ -23,14 +23,15 @@
     "gatsby-source-shopify": "^3.0.24",
     "gatsby-transformer-sharp": "^2.3.0",
     "js-yaml": "^3.13.1",
-    "lodash": "^4.17.19",
+    "lodash": "^4.17.20",
     "prop-types": "^15.7.2",
     "querystringify": "^2.0.0",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "react-helmet": "^5.2.1",
     "set-value": "^2.0.1",
-    "shopify-buy": "^2.8.0"
+    "shopify-buy": "^2.8.0",
+    "@snyk/protect": "latest"
   },
   "keywords": [
     "gatsby",
@@ -45,7 +46,9 @@
     "dev": "gatsby develop",
     "start": "npm run dev",
     "format": "prettier --write \"src/**/*.js\"",
-    "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
+    "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\"",
+    "prepublish": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "devDependencies": {
     "prettier": "^1.15.2"
@@ -56,5 +59,6 @@
   },
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
-  }
+  },
+  "snyk": true
 }
